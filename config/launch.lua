@@ -6,12 +6,12 @@ local options = {
 }
 
 if platform.is_win then
-  options.default_prog = { "wsl.exe", "fish" }
+  options.default_prog = { "wsl.exe" }
   options.launch_menu = {
     { label = " PowerShell v1", args = { "powershell" } },
     { label = " PowerShell v7", args = { "pwsh.exe", "-NoLogo" } },
     { label = " Cmd", args = { "cmd" } },
-    { label = " WSL", args = { "wsl.exe", "fish" } },
+    { label = " WSL", args = { "wsl.exe" } },
     {
       label = " GitBash",
       args = { "C:\\Users\\chainmeans-01\\AppData\\Local\\Programs\\Git\\git-bash.exe" },
