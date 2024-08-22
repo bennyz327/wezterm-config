@@ -1,4 +1,5 @@
 local wezterm = require("wezterm")
+local platform = require("utils.platform")
 
 -- Inspired by https://github.com/wez/wezterm/discussions/628#discussioncomment-1874614
 
@@ -6,9 +7,9 @@ local GLYPH_SEMI_CIRCLE_LEFT = ""
 -- local GLYPH_SEMI_CIRCLE_LEFT = utf8.char(0xe0b6)
 local GLYPH_SEMI_CIRCLE_RIGHT = ""
 -- local GLYPH_SEMI_CIRCLE_RIGHT = utf8.char(0xe0b4)
-local GLYPH_CIRCLE = "󰇷 "
+local GLYPH_CIRCLE = "󰋽 "
 -- local GLYPH_CIRCLE = utf8.char(0xf111)
-local GLYPH_ADMIN = "󰖳 "
+local GLYPH_ADMIN = " "
 -- local GLYPH_ADMIN = utf8.char(0xfc7e)
 
 local M = {}
@@ -41,7 +42,15 @@ M.set_title = function(process_name, static_title, active_title, max_width, inse
   inset = inset or 6
 
   if process_name:len() > 0 and static_title:len() == 0 then
-    title = "  " .. process_name .. " ~ " .. " "
+    
+    if platform().is_win then
+      title = "  " .. process_name .. " ~ " .. " "
+    elseif platform().is_mac then
+      title = "  " .. process_name .. " ~ " .. " "
+    elseif platform().is_linux then
+      title = "󰌽  " .. process_name .. " ~ " .. " "
+    end
+
   elseif static_title:len() > 0 then
     title = "󰌪  " .. static_title .. " ~ " .. " "
   else

@@ -9,7 +9,7 @@ if platform.is_win then
   options.default_prog = { "pwsh.exe", "-NoLogo" }
   options.launch_menu = {
     { label = " PowerShell v1", args = { "powershell" } },
-    { label = " PowerShell v7", args = { "pwsh" } },
+    { label = " PowerShell v7", args = { "pwsh.exe", "-NoLogo" } },
     { label = " Cmd", args = { "cmd" } },
     { label = " Nushell", args = { "nu" } },
     {
