@@ -6,7 +6,7 @@ local options = {
 }
 
 if platform.is_win then
-  options.default_prog = { "powershell" }
+  options.default_prog = { "pwsh.exe", "-NoLogo" }
   options.launch_menu = {
     { label = " PowerShell v1", args = { "powershell" } },
     { label = " PowerShell v7", args = { "pwsh" } },
@@ -14,11 +14,11 @@ if platform.is_win then
     { label = " Nushell", args = { "nu" } },
     {
       label = " GitBash",
-      args = { "C:\\soft\\Git\\bin\\bash.exe" },
+      args = { "C:\\Users\\chainmeans-01\\AppData\\Local\\Programs\\Git\\git-bash.exe" },
     },
     {
-      label = " AlmaLinux",
-      args = { "ssh", "kali@192.168.44.147", "-p", "22" },
+      label = " 5025 Server",
+      args = { "ssh", "ubuntu@192.168.50.25", "-p", "22" },
     },
   }
 elseif platform.is_mac then
