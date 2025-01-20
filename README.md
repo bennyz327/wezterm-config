@@ -1,16 +1,6 @@
 # 我的WezTerm配置
 
-**截图一**
-
-![screenshot](./screenshots/screenshot-1.png) 
-
-**截图二**
-
-![screenshot](./screenshots/screenshot-2.png) 
-
-
-
-## 相关链接
+## 相關連結
 
 - <https://github.com/rxi/lume>
 - <https://github.com/catppuccin/wezterm>
@@ -20,13 +10,13 @@
 
 
 
-## 原作者仓库
+## 原作者
 
 - <https://github.com/KevinSilvester/wezterm-config>
 
 
 
-## 前提条件
+## 前提條件
 
 **1、安装`wezterm`终端**
 
